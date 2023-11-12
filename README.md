@@ -3,6 +3,8 @@ itcastmd
 
 itcastmd is an npm tool that converts Markdown files into an HTML website.
 
+[中文文档](./CHINESE.md)
+
 ## Preview 
 
 ![](https://github.com/i5ting/i5ting_ztree_toc/blob/master/demo/3.png)
