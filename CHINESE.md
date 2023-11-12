@@ -1,7 +1,7 @@
 itcastmd 
 =========
 
-itcastmd is an npm tool that converts Markdown files into an HTML website.
+itcastmd 是一个将markdown文件转换成html网站的npm的工具.
 
 ## Preview 
 
@@ -13,32 +13,34 @@ itcastmd is an npm tool that converts Markdown files into an HTML website.
 	
 ## Usage
 
+常见用法:
+
 ```shell
 itcastmd -f sample.md -o
 ```
-
-This version of the command is relatively simple, with only one -f parameter. If not specified, it defaults to using README.md.
+这个版本的命令比较简单，只有一个`-f`参数，如果没有填写，默认使用`README.md`
 
 ```
-  Options:
+  Options:(其他参数)
     -h, --help             output usage information
     -V, --version          output the version number
     -f, --file [filename]  default is README.md 
 		-o, --open             open in browser
-    -v, --verbose          print the logs
+    -v, --verbose          打印详细日志
 ```
 
 
 	
 ## Api Usages
 
-Example:
+示例说明
 
 ```
 var is_open = true;
 var markd_config = {
 	debug: false
 }
+//函数可以返回当前正在执行的项目路径
 var pwd = process.cwd()  
 
 var source_file_name = pwd + '/' + source_file
@@ -55,13 +57,13 @@ require('../index')(pwd, source_file_name, dest_file_path, is_open, markd_config
 
 ```
 
-Parameter Descriptions:
+参数说明
 
-- pwd: The location where the preview is stored.
-- source_file: The Markdown file to be compiled.
-- dest_file_path: The complete path and filename for the generated HTML.
-- is_open: Indicates whether to open the HTML in a browser after compilation.
-- markd_config: Compilation options for Markdown (refer to https://github.com/chjj/marked for specifics).
+- pwd是存放preview的位置
+- source_file 要编译的mardown文件
+- dest_file_path 生成的html完整路径和文件名
+- is_open 是否在编译后使用浏览器中打开html
+- markd_config 编译md的选项（具体见 https://github.com/chjj/marked ）
 
 ## Basic
 
@@ -104,20 +106,20 @@ template for compile use [handlebars](http://handlebarsjs.com/)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-## Recommend
+## 推荐
 
 - [mac-dev-setup](http://aaaaaashu.gitbooks.io/mac-dev-setup/content/index.html)
 - [How To Build A CLI Tool With Node.js And PhantomJS](http://www.smashingmagazine.com/2014/02/12/build-cli-tool-nodejs-phantomjs/)
 
-## Version History
+## 版本历史
 
-- v0.1.0
+- v0.1.0 初始化版本
 
-## Welcome Fork and Comment
+## 欢迎fork和反馈
 
 - write by  malun666@126.com
 
-If you have suggestions or feedback, please raise an issue or send an email.
+如有建议或意见，请在issue提问或邮件
 
 ## License
 
